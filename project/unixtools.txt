@@ -1,0 +1,39 @@
+*********************************************************************
+
+1. renamefile 
+
+	 Version 1.0
+
+	 usage: renamefile <file> <replace_this_string> <by_this_string>
+		  or: renamefile <file> <delete_this_string>
+
+	 Ersetzen einer Zeichenkette in einem Dateinamen
+
+	 Beispiel: 
+
+		Finde alle Dateien, die mit 100044_GSA anfangen und ersetze
+    in diesem Dateinamen _L5 mit _M5:
+
+		find . -name "100044_GSA*" -exec ./renamefiles {} _L5 _M5 \;
+
+*********************************************************************
+
+2. replaceinfile
+
+   Version 1.0
+
+	 usage: replaceinfile <file> <replace_this_string> <by_this_string>
+      or: replaceinfile <file> <remove_this_string>
+
+	 Ersetzen von Zeichenketten in einer Datei
+
+	 Beispiel:
+
+		 Finde alle Dateien mit der Dateiendung .txt und ersetze in diesen
+     Dateien _L5 mit _M5:
+
+	   find . -name "*.txt" -exec ./replaceinfile {} _L5 _M5 \;
+
+
+*********************************************************************
+
